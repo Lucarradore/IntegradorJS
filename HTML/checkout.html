@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../image/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="/CSS/main.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <title>Checkout</title>
+    <style>
+        .error {
+            color: red;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <form id="checkoutForm">
+        <h1>Formulario de Compra</h1>
+        <div>
+            <label class="paragraph">Nombre:</label>
+            <input type="text" id="name" required>
+            <span class="error" id="nameError"></span>
+        </div>
+        <div>
+            <label class="paragraph">Apellido:</label>
+            <input type="text" id="surname" required>
+            <span class="error" id="surnameError"></span>
+        </div>
+        <div>
+            <label class="paragraph">Método de pago:</label>
+            <select id="paymentMethod">
+                <option value="">Seleccione una opción</option>
+                <option value="efectivo">Efectivo</option>
+                <option value="transferencia">Transferencia</option>
+            </select>
+            <span class="error" id="paymentError"></span>
+        </div>
+        <p>Total a pagar: <span id="totalPrice"></span></p>
+        <p>Número de orden: <span id="orderNumber"></span></p>
+        <p>Llegada estimada: 3-5 días</p>
+        <button type="submit">Siguiente</button>
+    </form>
+
+    <script src="/JS/checkout.js"></script>
+</body>
+</html>
+
